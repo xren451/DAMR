@@ -137,6 +137,7 @@ def Sliding_impute(Data_missing,Data_true,window):
     import numpy as np
     from math import sqrt
     from sklearn.preprocessing import MinMaxScaler
+    from fancyimpute import SimpleFill
     Data_missing=np.array(Data_missing)
     Data_true=np.array(Data_true)
     missing_mask=[]
@@ -151,6 +152,12 @@ def Sliding_impute(Data_missing,Data_true,window):
             if np.isnan(Data_Sliding.iloc[i,j]):
                 Data_Sliding.iloc[i,j]=np.mean(Data_Sliding.iloc[max(0,i-window):min(Data_Sliding.shape[0],i+window),j])
     Data_Sliding=np.array(Data_Sliding)
+   # for i in range(np.array(Data_Sliding).shape[0]):#Not sure if it should be deleted or not.
+    #    for j in range(np.array(Data_Sliding).shape[1]):#Not sure if it should be deleted or not.
+    #         if Data_Sliding[i,j]=="inf":#Not sure if it should be deleted or not.
+   #                  Data_Sliding[i,j]=np.nan#Not sure if it should be deleted or not.
+   # MEAN_imputer = SimpleFill()#Not sure if it should be deleted or not.
+   # Data_Sliding = MEAN_imputer.fit_transform(Data_Sliding)#Not sure if it should be deleted or not.
     #Normalization
     scaler = MinMaxScaler(feature_range=(-1, 1))
     scaled1 = scaler.fit_transform(Data_true)
@@ -162,7 +169,7 @@ def Sliding_impute(Data_missing,Data_true,window):
     Sliding_mae= abs((np.array(Data_true)[missing_mask]-np.array(Data_Sliding)[missing_mask])).mean()
     Sliding_mape= abs((np.array(Data_true)[missing_mask]-np.array(Data_Sliding)[missing_mask])/np.array(Data_true)[missing_mask]).mean()
     Sliding_mre=sum(abs((np.array(Data_true)[missing_mask]-np.array(Data_Sliding)[missing_mask])))/sum(abs(np.array(Data_true)[missing_mask]))
-    return Sliding_mae,Sliding_mape,Sliding_mre,Sliding_rmse,Data_Sliding
+    return Sliding_rmse,Sliding_mae,Sliding_mape,Sliding_mre,Data_Sliding
 def KNN_impute_3D(Data_missing,Data_true,missing_mask):#Return:RMSE,MAE,MAPE,MRE
     from fancyimpute import KNN
     import pandas as pd
@@ -258,7 +265,7 @@ def MEAN_impute_3D(Data_missing,Data_true,missing_mask):#Return:RMSE,MAE,MAPE,MR
     for i in range(Data_MEAN.shape[2]):
         MEAN_rmse.append(sqrt(((np.array(Data_true)[missing_mask] - np.array(Data_MEAN)[missing_mask]) ** 2).mean()))
         MEAN_mae.append(abs((np.array(Data_true)[missing_mask]-np.array(Data_MEAN)[missing_mask])).mean())
-#         MEAN_mape.append(abs((np.array(Data_true)[missing_mask]-np.array(Data_MEAN)[missing_mask])/np.array(Data_true)[missing_mask]).mean())
+#      MEAN_mape.append(abs((np.array(Data_true)[missing_mask]-np.array(Data_MEAN)[missing_mask])/np.array(Data_true)[missing_mask]).mean())
         MEAN_mre.append(sum(abs((np.array(Data_true)[missing_mask]-np.array(Data_MEAN)[missing_mask])))/sum(abs(np.array(Data_true)[missing_mask])))
         MEAN_mape.append(np.mean(np.abs((np.array(Data_true)[missing_mask]-np.array(Data_MEAN)[missing_mask]) / np.clip(np.abs(np.array(Data_true)[missing_mask]), 0.1, None)),axis=-1))
     MEAN_rmse=np.mean(np.array(MEAN_rmse))
