@@ -13,4 +13,10 @@ For CN dataset, please download the dataset from this paper: "Forecasting fine-g
 For KDD-CUP dataset, please download the dataset from this link: https://www.kdd.org/kdd2018/kdd-cup provided by the paper: "Dynamic Gaussian Mixture based Deep Generative Model For Robust Forecasting on Sparse Multivariate Time Series". You can add this dataset into our folder.
 
 #Experiment
-To better understand our approach, we use 
+To better understand our approach, we use several timestamps of DAMR_AIRQUALITY.ipynb and DAMR_NETHERLAND.ipynb datasets for convenience.
+In  DAMR_AIRQUALITY.ipynb and DAMR_NETHERLAND.ipynb, we provide the DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
+For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with complete datasets and modify the input path "data=Csv2Tensor('Data/COVID/raw')" as other datasets.
+
+#Baseline models on GRIN
+Run the code on https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt, please use python main.py on baseline folder.
+
