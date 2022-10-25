@@ -17,6 +17,18 @@ To better understand our approach, we use several timestamps of DAMR_AIRQUALITY.
 In  DAMR_AIRQUALITY.ipynb and DAMR_NETHERLAND.ipynb, we provide the DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
 For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with complete datasets and modify the input path "data=Csv2Tensor('Data/COVID/raw')" as other datasets.
 
-#Baseline models on GRIN
-Run the code on https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt, please use python main.py on baseline folder.
+#Baseline models on GRIN:
 
+Run the code on https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt, please run "python main.py" on baseline folder.
+
+#Baseline models BRITS:
+Follow the steps on BRITS:https://github.com/caow13/BRITS. 
+
+1.Put the dataset into raw folder.
+2.Make a empty folder named json, and run input_process.py.
+
+#Baseline models GRAPE
+Follow the steps on GRAPE: https://github.com/maxiaoba/GRAPE and make minor changes.
+
+Use the following command:
+python train_mdi.py uci --data concrete
