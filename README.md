@@ -37,4 +37,11 @@ Follow the steps on GRAPE: https://github.com/maxiaoba/GRAPE and make minor chan
 2.Run python train_mdi.py uci --data ND. 
 
 #Ablation study:
-Follow 
+Run 
+DAMR_Ablation-Diffconv.ipynb,
+DAMR_Ablation-GAT+Diffconv.ipynb,
+DAMR_Ablation-GAT+GCN.ipynb,
+DAMR_Ablation-GAT.ipynb,
+DAMR_Ablation-GCN.ipynb,
+DAMR_Ablation-Diffconv.ipynb
+to conduct ablation study.
