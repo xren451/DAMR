@@ -176,4 +176,50 @@ def Csv2Tensor(pathroot):#Input:Path root Output:samp*var*station.Eg:data=Getdir
     data=np.array(data).transpose(1,2,0)#(503,3,7)
     return data
 
+def fftTransfer1(timeseries, n=10, fmin=0.2):
+    import pandas as pd
+    import numpy as np
+    import math
+    from scipy.fftpack import fft, ifft
+    import matplotlib.pyplot as plt
+    import seaborn
+    import scipy.signal as signal
+
+    yf = abs(fft(timeseries))  # 取绝对值
+    yfnormlize = yf / len(timeseries)  # 归一化处理
+    yfhalf = yfnormlize[range(int(len(timeseries) / 2))]  # 由于对称性，只取一半区间
+    yfhalf = yfhalf * 2  # y 归一化
+
+    xf = np.arange(len(timeseries))  # 频率
+    xhalf = xf[range(int(len(timeseries) / 2))]  # 取一半区间
+
+    #     plt.subplot(212)
+    #     plt.plot(xhalf, yfhalf, 'r')
+    #     plt.title('FFT of Mixed wave(half side frequency range)', fontsize=10, color='#7A378B')  # 注意这里的颜色可以查询颜色代码表
+
+    fwbest = yfhalf[signal.argrelextrema(yfhalf, np.greater)]  # Amplitude
+    xwbest = signal.argrelextrema(yfhalf, np.greater)  # Frequency
+    #     plt.plot(xwbest[0][:n], fwbest[:n], 'o', c='yellow')
+    #     plt.show(block=False)
+    #     plt.show()
+
+    xorder = np.argsort(-fwbest)  # 对获取到的极值进行降序排序，也就是频率越接近，越排前
+    #print('xorder = ', xorder)
+    xworder = list()
+    xworder.append(xwbest[x] for x in xorder)  # 返回频率从大到小的极值顺序
+    fworder = list()
+    fworder.append(fwbest[x] for x in xorder)  # 返回幅度
+    fwbest = fwbest[fwbest >= fmin].copy()
+    x=len(timeseries) / xwbest[0][:len(fwbest)]
+    y=fwbest
+    a=np.zeros((len(y),2), dtype='float32')
+    a[:,0]=y#Get amplitude
+    a[:,1]=x#Get Periodic terms
+    df=pd.DataFrame(a)
+    df.set_axis(["amp","period"],axis=1,inplace=True)
+    # sorting data frame by name
+    df.sort_values("amp", axis = 0, ascending = False,
+                 inplace = True, na_position ='last')
+    df=df.iloc[:n,:]
+    return df
 
