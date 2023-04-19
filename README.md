@@ -16,8 +16,8 @@ For KDD-CUP dataset, please download the dataset from this link: https://www.kdd
 
 #Experiment:
 
-To better understand our approach, we use several timestamps of DAMR_AIRQUALITY.ipynb and DAMR_NETHERLAND.ipynb datasets for convenience.
-In  DAMR_AIRQUALITY.ipynb and DAMR_NETHERLAND.ipynb, we provide the DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
+To better understand our approach, we use DAMR_AIRQUALITY.ipynb for convenience.
+In  DAMR_AIRQUALITY.ipynb, we provide the DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
 For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with complete datasets and modify the input path "data=Csv2Tensor('Data/COVID/raw')" as other datasets.
 
 #Baseline models on GRIN:
