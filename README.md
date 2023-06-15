@@ -50,6 +50,9 @@ to conduct ablation study.
 
 # Citation
 
+- John Doe. (2022). My Awesome Paper. Journal of GitHub Studies, 1(1), 42-56.
+
+
 @article{xren,
     title = {{Serenade - Low-Latency Session-Based Recommendation in e-Commerce at Scale}},
     year = {2023},
