@@ -8,35 +8,36 @@ we design DAMR that extracts various dynamic patterns of spatial correlations an
 ![10 AM layers](https://user-images.githubusercontent.com/98369049/197795715-4d7065e3-fa56-4468-ac9c-4df0757411c2.jpg)
 
 
-#Dataset:
+# Dataset:
 
 For IN, SZ, CO and NZ dataset, please refer to the data folder.
 For CN dataset, please download the dataset from the paper [here](https://dl.acm.org/doi/10.1145/2783258.2788573).
 For KDD-CUP dataset, please download the dataset [here](https://www.kdd.org/kdd2018/kdd-cup)  provided by the paper [here](https://arxiv.org/abs/2103.02164) and add this dataset into our folder.
 
-#Experiment:
+# Experiment:
 
 To better understand our approach, we use DAMR_AIRQUALITY.ipynb for convenience.
 In  DAMR_AIRQUALITY.ipynb, we provide the DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
 For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with complete datasets and modify the input path "data=Csv2Tensor('Data/COVID/raw')" by changing "COVID" with other datasets.
 
-#Baseline models on GRIN:
+# Baseline models 
+(1) GRIN:
 
 Run the code on [GRIN](https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt), please run "python main.py" on baseline folder.
 
-#Baseline models BRITS:
+(2) BRITS:
 Follow the steps on [BRITS](https://github.com/caow13/BRITS). 
 
 1.Put the dataset into raw folder.
 2.Make a empty folder named json, and run input_process.py.
 
-#Baseline models GRAPE:
+(3) GRAPE:
 Follow the steps on [GRAPE](https://github.com/maxiaoba/GRAPE).
 
 1.Enter in the path GRAPE/uci/raw_data/concrete/data/, then modify data.txt into our datasets, eg. ND.
 2.Run python train_mdi.py uci --data ND. 
 
-#Ablation study:
+# Ablation study:
 Run 
 DAMR_Ablation-Diffconv.ipynb,
 DAMR_Ablation-GAT+Diffconv.ipynb,
@@ -47,7 +48,7 @@ DAMR_Ablation-Diffconv.ipynb
 to conduct ablation study.
 
 
-Citation
+# Citation
 
 @article{xren,
     title = {{Serenade - Low-Latency Session-Based Recommendation in e-Commerce at Scale}},
