@@ -53,15 +53,11 @@ to conduct ablation study.
 - Xiaobin Ren, Kaiqi Zhao and Patricia Riddle et al. (2023). DAMR: Dynamic Adjacency Matrix Representation Learning for Multivariate Time Series Imputation. SIGMOD.https://doi.org/10.1145/3589333.
 
 
-@article{xren,
-
+@article{
+    xren,
     title = {{Serenade - Low-Latency Session-Based Recommendation in e-Commerce at Scale}},
-    
     year = {2023},
-    
     journal = {SIGMOD},
-    
     author = {Xiaobin Ren and Kaiqi Zhao and Patricia Riddle and Katerina Ta\v{s}kova and Lianyan Li and Qingyi Pan}
-    
 }
 
