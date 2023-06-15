@@ -54,28 +54,14 @@ to conduct ablation study.
 
 
 # Reference
-
-@article{
-
-    xren,
+```bibtex
+@article{xren,
     title = {DAMR: Dynamic Adjacency Matrix Representation Learning for Multivariate Time Series Imputation},
     year = {2023},
     journal = {SIGMOD},
     author = {Xiaobin Ren and Kaiqi Zhao and Patricia Riddle and Katerina Ta\v{s}kova and Lianyan Li and Qingyi Pan}
-    
+    doi={10.1145/3589333},
     }
 
-```bibtex
-@article{Doe2022,
-  title={My Awesome Paper},
-  author={Doe, John},
-  journal={Journal of GitHub Studies},
-  volume={1},
-  number={1},
-  pages={42-56},
-  year={2022},
-  doi={10.xxxx/xxxx},
-  url={https://example.com}
-}
 
 
