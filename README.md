@@ -11,8 +11,8 @@ we design DAMR that extracts various dynamic patterns of spatial correlations an
 #Dataset:
 
 For IN, SZ, CO and NZ dataset, please refer to the data folder.
-For CN dataset, please download the dataset from this paper: "Forecasting fine-grained air quality based on big data".
-For KDD-CUP dataset, please download the dataset from this link: https://www.kdd.org/kdd2018/kdd-cup provided by the paper: "Dynamic Gaussian Mixture based Deep Generative Model For Robust Forecasting on Sparse Multivariate Time Series". You can add this dataset into our folder.
+For CN dataset, please download the dataset from the paper [here](https://dl.acm.org/doi/10.1145/2783258.2788573).
+For KDD-CUP dataset, please download the dataset [here](https://www.kdd.org/kdd2018/kdd-cup)  provided by the paper [here](https://arxiv.org/abs/2103.02164) and add this dataset into our folder.
 
 #Experiment:
 
