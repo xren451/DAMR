@@ -31,7 +31,7 @@ Follow the steps on [BRITS](https://github.com/caow13/BRITS).
 2.Make a empty folder named json, and run input_process.py.
 
 #Baseline models GRAPE:
-Follow the steps on [GRAPE](https://github.com/maxiaoba/GRAPE and make minor changes).
+Follow the steps on [GRAPE](https://github.com/maxiaoba/GRAPE).
 
 1.Enter in the path GRAPE/uci/raw_data/concrete/data/, then modify data.txt into our datasets, eg. ND.
 2.Run python train_mdi.py uci --data ND. 
