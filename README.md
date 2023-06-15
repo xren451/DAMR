@@ -54,10 +54,8 @@ to conduct ablation study.
 
 
 @article{
-
-
     xren,
-    title = {{Serenade - Low-Latency Session-Based Recommendation in e-Commerce at Scale}},
+    title = {DAMR: Dynamic Adjacency Matrix Representation Learning for Multivariate Time Series Imputation},
     year = {2023},
     journal = {SIGMOD},
     author = {Xiaobin Ren and Kaiqi Zhao and Patricia Riddle and Katerina Ta\v{s}kova and Lianyan Li and Qingyi Pan}
