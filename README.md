@@ -50,7 +50,7 @@ to conduct ablation study.
 
 # Citation
 
-- John Doe. (2022). My Awesome Paper. Journal of GitHub Studies, 1(1), 42-56.
+- Xiaobin Ren, Kaiqi Zhao and Patricia Riddle et al. (2023). DAMR: Dynamic Adjacency Matrix Representation Learning for Multivariate Time Series Imputation. SIGMOD.https://doi.org/10.1145/3589333.
 
 
 @article{xren,
