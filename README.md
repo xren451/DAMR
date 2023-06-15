@@ -22,7 +22,7 @@ For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with
 
 #Baseline models on GRIN:
 
-Run the code on https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt, please run "python main.py" on baseline folder.
+Run the code on [GRIN](https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt), please run "python main.py" on baseline folder.
 
 #Baseline models BRITS:
 Follow the steps on BRITS:https://github.com/caow13/BRITS. 
