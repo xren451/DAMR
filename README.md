@@ -25,13 +25,13 @@ For reproducibility on different datasets, please run DAMR_NETHERLAND.ipynb with
 Run the code on [GRIN](https://github.com/Graph-Machine-Learning-Group/grin/blob/main/requirements.txt), please run "python main.py" on baseline folder.
 
 #Baseline models BRITS:
-Follow the steps on BRITS:https://github.com/caow13/BRITS. 
+Follow the steps on [BRITS](https://github.com/caow13/BRITS). 
 
 1.Put the dataset into raw folder.
 2.Make a empty folder named json, and run input_process.py.
 
 #Baseline models GRAPE:
-Follow the steps on GRAPE: https://github.com/maxiaoba/GRAPE and make minor changes.
+Follow the steps on [GRAPE](https://github.com/maxiaoba/GRAPE and make minor changes).
 
 1.Enter in the path GRAPE/uci/raw_data/concrete/data/, then modify data.txt into our datasets, eg. ND.
 2.Run python train_mdi.py uci --data ND. 
