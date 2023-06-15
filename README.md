@@ -65,3 +65,17 @@ to conduct ablation study.
     
     }
 
+```bibtex
+@article{Doe2022,
+  title={My Awesome Paper},
+  author={Doe, John},
+  journal={Journal of GitHub Studies},
+  volume={1},
+  number={1},
+  pages={42-56},
+  year={2022},
+  doi={10.xxxx/xxxx},
+  url={https://example.com}
+}
+
+
