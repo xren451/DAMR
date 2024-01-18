@@ -17,7 +17,7 @@ For KDD-CUP dataset, please download the dataset [here](https://www.kdd.org/kdd2
 # Experiment:
 
 To better understand our approach, we use DAMR_AIRQUALITY.ipynb for convenience.
-In  DAMR_AIRQUALITY.ipynb, we provide the colab version of DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
+In  DAMR_AIRQUALITY.ipynb, we provide the colab version [here](https://colab.research.google.com/drive/17oVpiGxk0cc8-7KqFLfaR48jMVIGqiRI#scrollTo=ilgHAyWXbtou) of DAMR approach and several statistical baseline models: Mean, Sliding Window, MF, KNN and MICE.
 For reproducibility on different datasets, please modify the input path "data=Csv2Tensor('Data/AIRQUALITY/raw')" by changing "AIRQUALITY" with other datasets.
 The default setting of hyper-parameters are shown here:
 Miss_perc = 0.1;
