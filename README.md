@@ -30,6 +30,7 @@ seed = 42;
 verbose = 1;
 path = '/content/DAMR/Data/Airquality/raw'
 
+You can easily replace with other hyper parameters in colab.
 # Baseline models 
 (1) GRIN:
 
